@@ -40,7 +40,7 @@
     const genBoard = () => {
         for (let i = 0; i < GRID_SIZE; i++) {
             for (let j = 0; j < GRID_SIZE; j++) {
-                if (Math.random() < 0) {
+                if (Math.random() < 0.25) {
                     toggleCell(i, j);
                 }
             }
