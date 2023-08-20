@@ -51,11 +51,12 @@
 </script>
 
 <main>
-    <div class="center">
-        {#if won}
-            <h1>You won in {clicks} {clicks == 1 ? 'click' : 'clicks'}</h1>
-        {:else}
-            clicks = {clicks}
+    <h2>Lights Out</h2>
+    <em class="clickCount">clicks = {clicks}</em>
+    {#if won}
+        <h1>You won in {clicks} {clicks == 1 ? 'click' : 'clicks'}</h1>
+    {:else}
+        <div class="center">
             <div>
                 {#each grid as row, i}
                     <div class="row">
@@ -74,11 +75,22 @@
                     </div>
                 {/each}
             </div>
-        {/if}
-    </div>
+        </div>
+        <p>
+            This is a <a target="_blank" href="https://www.logicgamesonline.com/lightsout"
+                >lights out</a
+            > implementation in Svelte. <br />
+            The goal of the game is to turn all the squares black. <br />
+            Clicking a square toggles itself and the 4 adjacent squares on or off. 
+        </p>
+    {/if}
 </main>
 
 <style>
+    a {
+        font-weight: 500;
+    }
+
     .square {
         width: 50px;
         height: 50px;

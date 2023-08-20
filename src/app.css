@@ -2,6 +2,9 @@ body {
     margin: 0;
     display: flex;
     place-items: center;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        'Noto Color Emoji';
 }
 
 #app {
@@ -9,3 +12,4 @@ body {
     padding: 2rem;
     text-align: center;
 }
+
